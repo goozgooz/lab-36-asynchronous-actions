@@ -1,7 +1,7 @@
 {
   "name": "workspace",
   "version": "1.0.0",
-  "description": "Ashkaan",
+  "description": "Ashkaan 401 Labs",
   "main": "index.js",
   "devDependencies": {
     "babel-jest": "^22.0.4",
@@ -51,6 +51,6 @@
     "superagent": "^3.8.1",
     "uuid": "^3.1.0",
     "webpack": "^3.8.1",
-    "webpack-dev-server": "^2.9.7"
+    "webpack-dev-server": "^2.10.0"
   }
 }

@@ -8,23 +8,13 @@ import App from './component/app';
 import reducer from './reducer/index.js';
 import formValidator from './lib/form-validator.js';
 
-let store = createStore(reducer, applyMiddleware(formValidator));
+const store = createStore(reducer, applyMiddleware(formValidator));
 
 const container = document.createElement('div');
 document.body.appendChild(container);
 
-class Main extends React.Component {
-  constructor(props){
-    super(props);
-  };
-
-  render(){
-    return(
-      <Provider store={store}>
-        <App />
-      </Provider>
-    )
-  }
-}
-
-export default Main;
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>
+  , container);
