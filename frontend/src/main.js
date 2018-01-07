@@ -18,5 +18,4 @@ ReactDOM.render(
     <App />
   </Provider>
   , container);
-
-  console.log(__API_URL__);
+  

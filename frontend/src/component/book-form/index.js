@@ -8,7 +8,7 @@ const emptyState = {
 class BookForm extends React.Component{
   constructor(props){
     super(props);
-    this.state = {emptyState};
+    this.state = emptyState;
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -22,7 +22,7 @@ class BookForm extends React.Component{
   handleSubmit(e){
     e.preventDefault();
     this.props.book.addBook(this.state);
-    this.setState(emptyState);
+    this.setState(emptyState)
   };
 
   render(){
