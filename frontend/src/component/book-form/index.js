@@ -1,6 +1,6 @@
 import React from 'react';
 
-let emptyState = {
+const emptyState = {
   title: '',
   author: '',
 }
@@ -8,7 +8,7 @@ let emptyState = {
 class BookForm extends React.Component{
   constructor(props){
     super(props);
-    this.state = emptyState;
+    this.state = {emptyState};
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -21,7 +21,7 @@ class BookForm extends React.Component{
 
   handleSubmit(e){
     e.preventDefault();
-    console.log('submitted', this.state);
+    this.props.book.addBook(this.state);
     this.setState(emptyState);
   };
 
