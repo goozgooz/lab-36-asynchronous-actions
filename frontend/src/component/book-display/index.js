@@ -1,4 +1,5 @@
 import React from 'react';
+import BookItem from '../book-item';
 
 class BookDisplay extends React.Component{
   constructor(props){
@@ -12,6 +13,7 @@ class BookDisplay extends React.Component{
   displayBooks(){
     if(!this.props.books) return;
     for(let book in this.props.books){
+      <BookItem data={this.props.books[book]} />
       // <h3> this.props.books[book].title </h3>
       // console.log(this.props.books[book])
     }
