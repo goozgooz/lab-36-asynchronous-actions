@@ -25,6 +25,7 @@ const mapDispatchToProps = (dispatch) => ({
   bookActions: {
     addBook: book => dispatch(books.create(book)),
     deleteBook: book => dispatch(books.destroy(book)),
+    readBook : book => dispatch(books.read(book)),
   }
 });
 

@@ -5,6 +5,7 @@ export const create = ({title, author}) => ({
   payload: {
     title,
     author,
+    read: false, 
     id: uuid(),
   },
 });
@@ -13,3 +14,8 @@ export const destroy = (payload) => ({
   type: 'BOOK_DELETE',
   payload,
 });
+
+export const read = (payload) => ({
+  type: 'BOOK_READ',
+  payload,
+})

@@ -13,6 +13,18 @@ class BookForm extends React.Component{
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
+  
+  componentDidMount(){
+    this.props.bookActions.addBook({
+      title: 'The Name of the Wind',
+      author: 'Rothfuss',
+    });
+    
+      this.props.bookActions.addBook({
+      title: 'Harry Pooter',
+      author: 'Rowling',
+    });
+  }
 
   handleChange(e){
     let {name,value} = e.target;
