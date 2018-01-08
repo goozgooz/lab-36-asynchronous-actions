@@ -10,8 +10,8 @@ class Dashboard extends React.Component{
   render(){
     return(
       <div>
-        <BookForm book={this.props.bookActions}/>
-        <BookDisplay books={this.props.state} />
+        <BookForm bookActions={this.props.bookActions}/>
+        <BookDisplay books={this.props.state} bookActions={this.props.bookActions} />
       </div>
     )
   }
@@ -24,6 +24,7 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => ({
   bookActions: {
     addBook: book => dispatch(books.create(book)),
+    deleteBook: book => dispatch(books.destroy(book)),
   }
 });
 

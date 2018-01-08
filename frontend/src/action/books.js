@@ -8,3 +8,8 @@ export const create = ({title, author}) => ({
     id: uuid(),
   },
 });
+
+export const destroy = (payload) => ({
+  type: 'BOOK_DELETE',
+  payload,
+});

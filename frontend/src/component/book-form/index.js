@@ -21,7 +21,7 @@ class BookForm extends React.Component{
 
   handleSubmit(e){
     e.preventDefault();
-    this.props.book.addBook(this.state);
+    this.props.bookActions.addBook(this.state);
     this.setState(emptyState)
   };
 
