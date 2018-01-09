@@ -6,9 +6,10 @@ import {Provider} from 'react-redux';
 
 import App from './component/app';
 import reducer from './reducer/index.js';
-import formValidator from './lib/form-validator.js';
+import reporter from './lib/form-validator.js';
+import thunk from './lib/thunk';
 
-const store = createStore(reducer, applyMiddleware(formValidator));
+const store = createStore(reducer, applyMiddleware(thunk, reporter));
 
 const container = document.createElement('div');
 document.body.appendChild(container);

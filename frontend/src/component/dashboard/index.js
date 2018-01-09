@@ -10,7 +10,9 @@ class Dashboard extends React.Component{
   render(){
     return(
       <div>
+        <h1> Book Tracker </h1>
         <BookForm bookActions={this.props.bookActions}/>
+        <br/>
         <BookDisplay books={this.props.state} bookActions={this.props.bookActions} />
       </div>
     )

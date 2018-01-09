@@ -14,7 +14,7 @@ class BookItem extends React.Component{
         {util.renderIf((!this.props.data.read), 
           <div className='book-item'>
             <span> {title} by {author} </span>
-            <button onClick={() => this.props.bookActions.readBook(this.props.data)}> read </button>
+            <button onClick={() => this.props.bookActions.readBook(this.props.data)}> mark as read </button>
             <button onClick={() => this.props.bookActions.deleteBook(this.props.data)}> delete </button>
           </div>
         )}
@@ -22,7 +22,7 @@ class BookItem extends React.Component{
         {util.renderIf((this.props.data.read), 
           <div className='book-item'>
             <strike> {title} by {author} </strike>
-            <button onClick={() => this.props.bookActions.readBook(this.props.data)}> read </button>
+            <button onClick={() => this.props.bookActions.readBook(this.props.data)}> mark as unread </button>
             <button onClick={() => this.props.bookActions.deleteBook(this.props.data)}> delete </button>
           </div>
         )}
